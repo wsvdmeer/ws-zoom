@@ -1,0 +1,26 @@
+.zoom{
+    position: relative;
+    cursor:crosshair;
+}
+
+.zoom-window{
+    position: absolute;
+    
+    overflow: hidden;
+    background-color:white;
+    z-index:1000;
+    display: none;
+    border: 1px solid #EDEDED;
+     background-image:url("images/loader-white.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+}
+.zoom-window img{
+   min-width: 100%;
+   min-height:100%;
+   display: block;
+    position: absolute;
+    top:0;
+    left:0;
+}

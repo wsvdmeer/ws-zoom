@@ -1,0 +1,70 @@
+body, html{
+   width:100%;
+   height:100%;
+   background-color:#333;
+   margin:0;
+   padding:0;
+}
+body{
+  font-family: "Arial";
+  font-size:13px;
+
+}
+
+.main{
+   width:960px;
+   height:360px;
+   position: absolute;
+   left:50%;
+   top:50%;
+   margin-left:-480px;
+   margin-top:-180px;
+   display: block;
+   background-color:#eee;
+   
+}
+
+.zoom{
+width:360px;
+height:360px;
+float: left;
+font-size: 30px;
+color:white;
+display: block;
+}
+
+
+
+
+.info{
+   float: right;
+   padding:30px;
+   background-color:white;
+   height:300px;
+   width:180px;
+}
+
+
+.zoom-window{
+   border:none;
+}
+.info h2{
+   margin:0;
+   padding:0;
+   font-weight: normal;
+   margin-bottom:10px;
+   margin-top:10px;
+}
+.info ul{
+   margin:0;
+   padding:0;
+   color:#666;
+   list-style: none;
+}
+.info ul li{
+   margin-bottom:3px;
+}
+
+a{
+   color:#EC008C;
+}
