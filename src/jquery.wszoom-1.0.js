@@ -58,12 +58,7 @@
            var windowYpos = this.options.windowYpos;
            var windowWidth = this.options.windowWidth;
            var windowHeight = this.options.windowHeight;
-           
-           debug(windowXpos);
-           debug(windowYpos);
-           debug(windowWidth);
-          debug(windowHeight)
-            
+          
             //ZOOM
               var obj = $(this.element);
             
