@@ -59,33 +59,76 @@
            var windowWidth = this.options.windowWidth;
            var windowHeight = this.options.windowHeight;
           
-            //ZOOM
+              //ZOOM
               var obj = $(this.element);
+              var thumb = obj.find("img");
+              
+              var scale = 0;
+              var thumbX = 0;
+              var thumbY = 0;
+              var thumbWidth = thumb.width()
+              var thumbHeight = thumb.height();
+              
+              //CHECK IMAGE SIZE
+              if(thumb.width()>thumb.height()){
+                scale = thumb.height()/thumb.width();
+                thumbWidth = obj.width();
+                thumbHeight = obj.width()*scale;
+                
+                thumbX = (obj.width()-thumbWidth)*.5;
+                thumbY = (obj.height()-thumbHeight)*.5;
+                
+                thumb.css({height:thumbHeight,width:thumbWidth,left:thumbX, top:thumbY});
+                 
+              }else if(thumb.width()<thumb.height()) {
+                scale = thumb.width()/thumb.height(); 
+                thumbHeight = obj.height();
+                thumbWidth = obj.height()*scale;
+                
+                thumbX = (obj.width()-thumbWidth)*.5;
+                thumbY = (obj.height()-thumbHeight)*.5;
+               
+               
+                thumb.css({height:thumbHeight,width:thumbWidth,left:thumbX, top:thumbY});
+                
+                
+              }else{
+                scale = 0;
+              }
+              
+             
+              
+              
+              debug(scale)
+              
             
             
               //CREATE WINDOW
               obj.append("<div class='zoom-window' style='width:"+windowWidth+"px;height:"+windowHeight+"px;left:"+windowXpos+"px;top:"+windowYpos+"px'><img src=''></div>")
             
               obj.mouseover(function(){
-                    if(obj.find(".zoom-window img").attr("src")== obj.find("img").data("large")){  
+                    if(obj.find(".zoom-window img").attr("src")== thumb.data("large")){  
                     }else{
-                        obj.find(".zoom-window img").attr("src",obj.find("img").data("large"));
+                        obj.find(".zoom-window img").attr("src",thumb.data("large"));
                     }
                     obj.find(".zoom-window").show();
              }).mouseout(function(){
                     obj.find(".zoom-window").hide();
              }).mousemove(function(event){
-               var xpos = event.pageX-obj.offset().left;
-               var ypos = event.pageY-obj.offset().top;
+                
+                
+                
+               var xpos = event.pageX-thumb.offset().left;
+               var ypos = event.pageY-thumb.offset().top;
         
-               if((xpos<0)||(xpos>obj.find("img").width())){
+               if((xpos<0)||(xpos>thumb.width())){
                     obj.find(".zoom-window").hide();
-               }else  if((ypos<0)||(ypos>obj.find("img").height())){
+               }else  if((ypos<0)||(ypos>thumb.height())){
                    obj.find(".zoom-window").hide();
                }
         
-               var pcx =(xpos/obj.find("img").width())*1;
-               var pcy =(ypos/obj.find("img").height())*1;
+               var pcx =(xpos/thumb.width())*1;
+               var pcy =(ypos/thumb.height())*1;
                var windowWidth =  obj.find(".zoom-window").width();
                var windowHeight = obj.find(".zoom-window").height();
                var maxX;

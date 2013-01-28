@@ -3,6 +3,12 @@
     cursor:crosshair;
 }
 
+.zoom img{
+    position: absolute;
+    top:0;
+    left:0;
+}
+
 .zoom-window{
     position: absolute;
     
@@ -23,4 +29,5 @@
     position: absolute;
     top:0;
     left:0;
+    
 }
