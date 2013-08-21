@@ -14,7 +14,7 @@ Html:
 
 Jquery:
 ```html
-$(".zoom").wscarousel();
+$(".zoom").wszoom();
 ```
 
 Defaults:
