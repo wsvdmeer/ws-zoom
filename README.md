@@ -23,4 +23,5 @@ Defaults:
 <li>windowYpos:0</li>
 <li>windowWidth:300</li>
 <li>windowHeight:300</li>
+<li>debug:false</li>
 </ul>
