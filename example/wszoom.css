@@ -17,7 +17,7 @@
     z-index:1000;
     display: none;
     border: 1px solid #EDEDED;
-     background-image:url("images/loader-white.gif");
+     background-image:url("../images/loader-white.gif");
     background-repeat: no-repeat;
     background-position: center center;
     
@@ -30,4 +30,14 @@
     top:0;
     left:0;
     
+}
+
+.zoom-window .debug{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.5);
+    color:#fff;
 }
