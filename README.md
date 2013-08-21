@@ -1,3 +1,6 @@
+Version 1.2
+Added touch events for mobile devices
+
 ws-carousel
 ===========
 
