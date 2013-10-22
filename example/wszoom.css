@@ -3,7 +3,16 @@
     cursor:crosshair;
 }
 
-.zoom img{
+.zoom a{
+    display: inline-block;
+    width:100%;
+    height:100%;
+}
+
+.zoom a img{
+    width:100%;
+    height:auto;
+    display: block;
     position: absolute;
     top:0;
     left:0;
@@ -14,7 +23,7 @@
     
     overflow: hidden;
     background-color:white;
-    z-index:1000;
+    z-index:11;
     display: none;
     border: 1px solid #EDEDED;
      background-image:url("../images/loader-white.gif");
@@ -22,6 +31,7 @@
     background-position: center center;
     
 }
+
 .zoom-window img{
    min-width: 100%;
    min-height:100%;

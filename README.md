@@ -22,9 +22,14 @@ $(".zoom").wszoom();
 
 Defaults:
 <ul>
-<li>windowXpos: 0</li>
-<li>windowYpos:0</li>
-<li>windowWidth:300</li>
-<li>windowHeight:300</li>
-<li>debug:false</li>
+<li>windowXpos: 0 (window x position)</li>
+<li>windowYpos:0 (window y position)</li>
+<li>windowWidth:300 (window width)</li>
+<li>windowHeight:300 (window height)</li>
+<li>fitImage:false (fit image proportional)</li>
+<li>centerImage:false (center image)</li>
+<li>autoSize:false (autosize zoom window overrules windowWidth/windowHeight!)</li>
+<li>debug:false (debug information)</li>
 </ul>
+
+
